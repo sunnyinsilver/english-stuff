@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos y Servicios - Mi Emprendimiento / My Business</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <h1>Nombre del Emprendimiento</h1>
+        <p class="slogan">Proyecto Interdisciplinario: Taller de Informática + Inglés</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="proyecto.html">El Proyecto</a></li>
+                <li><a href="productos.html">Productos y Servicios</a></li>
+                <li><a href="carrito.html" id="link-carrito">Carrito <span id="contador-nav"></span></a></li>
+                <li><a href="info.html">Info</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="conclusion.html">Conclusión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="catalogo">
+            <h2>Nuestros productos y servicios / Our products and services</h2>
+            <p>Elegí uno o más productos/servicios reales (inventados o basados en una idea real) y completá cada ficha en español e inglés.</p>
+
+            <!-- BUSCADOR: filtra las fichas de abajo mientras el usuario escribe. No hace falta tocar esto. -->
+            <div class="buscador">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="input-buscar" placeholder="Buscar producto... / Search product...">
+            </div>
+
+            <!-- TAREA: Completá cada ficha con nombre, precio en pesos, descripción bilingüe e imagen. -->
+            <!-- IMPORTANTE: el atributo data-nombre y data-precio-ars son los que usa el carrito y el buscador. -->
+            <!-- data-precio-ars debe ser SOLO UN NÚMERO (sin $, sin puntos de miles, sin texto). -->
+            <!-- El precio en dólares NO se carga a mano: lo calcula solo el sitio usando la cotización -->
+            <!-- del dólar blue que van a cargar en el Paso 6 de la guía (variable en js/script.js). -->
+            <!-- Podés agregar más fichas copiando el bloque completo <div class="tarjeta-producto">...</div> -->
+            <div class="grid-tarjetas">
+
+                <div class="tarjeta-producto" data-nombre="Nombre del producto / servicio 1" data-precio-ars="10000">
+                    <!-- TAREA (opcional): si este producto está en oferta, dejá esta etiqueta. Si no, borrala. -->
+                    <span class="etiqueta etiqueta-oferta">Oferta / Sale</span>
+                    <!-- <img src="ACÁ VA LA URL" alt="Nombre del producto 1" class="imagen-centrada"> -->
+                    <h3>Nombre del producto / servicio 1</h3>
+                    <p class="precio">$ 10.000 ARS <span class="precio-usd-auto"></span></p>
+                    <p><b>ES:</b> Descripción del producto o servicio en español.</p>
+                    <br>
+                    <p><b>EN:</b> Description of the product or service in English.</p>
+
+                    <div class="selector-cantidad">
+                        <label>Cantidad / Quantity:</label>
+                        <button class="btn-cantidad" data-accion="restar">−</button>
+                        <input type="number" class="input-cantidad" value="1" min="1">
+                        <button class="btn-cantidad" data-accion="sumar">+</button>
+                    </div>
+
+                    <button class="boton-agregar">Agregar al carrito / Add to cart</button>
+                </div>
+
+                <div class="tarjeta-producto" data-nombre="Nombre del producto / servicio 2" data-precio-ars="10000">
+                    <!-- TAREA (opcional): si quedan pocas unidades de este producto, dejá esta etiqueta. Si no, borrala. -->
+                    <span class="etiqueta etiqueta-stock">Últimas unidades / Few left</span>
+                    <!-- <img src="ACÁ VA LA URL" alt="Nombre del producto 2" class="imagen-centrada"> -->
+                    <h3>Nombre del producto / servicio 2</h3>
+                    <p class="precio">$ 10.000 ARS <span class="precio-usd-auto"></span></p>
+                    <p><b>ES:</b> Descripción del producto o servicio en español.</p>
+                    <br>
+                    <p><b>EN:</b> Description of the product or service in English.</p>
+
+                    <div class="selector-cantidad">
+                        <label>Cantidad / Quantity:</label>
+                        <button class="btn-cantidad" data-accion="restar">−</button>
+                        <input type="number" class="input-cantidad" value="1" min="1">
+                        <button class="btn-cantidad" data-accion="sumar">+</button>
+                    </div>
+
+                    <button class="boton-agregar">Agregar al carrito / Add to cart</button>
+                </div>
+
+                <div class="tarjeta-producto" data-nombre="Nombre del producto / servicio 3" data-precio-ars="10000">
+                    <!-- <img src="ACÁ VA LA URL" alt="Nombre del producto 3" class="imagen-centrada"> -->
+                    <h3>Nombre del producto / servicio 3</h3>
+                    <p class="precio">$ 10.000 ARS <span class="precio-usd-auto"></span></p>
+                    <p><b>ES:</b> Descripción del producto o servicio en español.</p>
+                    <br>
+                    <p><b>EN:</b> Description of the product or service in English.</p>
+
+                    <div class="selector-cantidad">
+                        <label>Cantidad / Quantity:</label>
+                        <button class="btn-cantidad" data-accion="restar">−</button>
+                        <input type="number" class="input-cantidad" value="1" min="1">
+                        <button class="btn-cantidad" data-accion="sumar">+</button>
+                    </div>
+
+                    <button class="boton-agregar">Agregar al carrito / Add to cart</button>
+                </div>
+
+            </div>
+
+            <p id="sin-resultados">No se encontraron productos con ese nombre. / No products found with that name.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Proyecto Interdisciplinario — Taller de Informática e Inglés</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

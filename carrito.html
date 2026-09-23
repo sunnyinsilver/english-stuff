@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - Mi Emprendimiento / My Business</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <h1>Nombre del Emprendimiento</h1>
+        <p class="slogan">Proyecto Interdisciplinario: Taller de Informática + Inglés</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="proyecto.html">El Proyecto</a></li>
+                <li><a href="productos.html">Productos y Servicios</a></li>
+                <li><a href="carrito.html" id="link-carrito">Carrito <span id="contador-nav"></span></a></li>
+                <li><a href="info.html">Info</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="conclusion.html">Conclusión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ============================================ -->
+        <!-- BLOQUE 1: EL CARRITO EN SÍ (lista + total)     -->
+        <!-- ============================================ -->
+        <section id="carrito">
+            <h2>Mi carrito / My cart</h2>
+            <p>Los productos se agregan desde la página <strong>"Productos y Servicios"</strong>.</p>
+            <br>
+            <div class="selector-moneda">
+                <label><input type="radio" name="moneda" value="ars" checked> Ver en Pesos (ARS)</label>
+                <label><input type="radio" name="moneda" value="usd"> Ver en Dólares (USD — cotización blue)</label>
+            </div>
+
+            <table id="tabla-carrito">
+                <thead>
+                    <tr>
+                        <th>Producto / Product</th>
+                        <th>Precio unitario / Unit price</th>
+                        <th>Cantidad / Qty</th>
+                        <th>Subtotal</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpo-carrito">
+                </tbody>
+            </table>
+
+            <p id="carrito-vacio">Todavía no agregaste ningún producto. / You haven't added any product yet.</p>
+
+            <div class="total-carrito">
+                <span>Total / Total:</span>
+                <span id="total-carrito">0</span>
+            </div>
+
+            <div class="acciones-carrito">
+                <button id="vaciar-carrito">Vaciar carrito / Empty cart</button>
+                <button id="boton-whatsapp"><i class="fa-brands fa-whatsapp"></i> Enviar pedido por WhatsApp</button>
+                <button id="boton-finalizar">Finalizar compra / Checkout</button>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- BLOQUE 2: FORMULARIO DE PAGO (checkout)        -->
+        <!-- ============================================ -->
+        <section id="checkout" style="display:none;">
+            <h2>Datos del pedido / Order details</h2>
+
+            <form id="formulario-checkout">
+                <label>Nombre y apellido / Full name:</label>
+                <input type="text" id="checkout-nombre" required>
+
+                <label>Dirección de envío / Shipping address:</label>
+                <input type="text" id="checkout-direccion" required>
+
+                <label>Contacto (email o teléfono) / Contact (email or phone):</label>
+                <input type="text" id="checkout-contacto" required>
+
+                <label>Forma de pago / Payment method:</label>
+                <div class="opciones-pago">
+                    <label><input type="radio" name="forma-pago" value="efectivo" checked> Efectivo / Cash</label>
+                    <label><input type="radio" name="forma-pago" value="transferencia"> Transferencia / Bank transfer</label>
+                </div>
+
+                <div id="datos-transferencia" style="display:none;">
+                    <!-- TAREA: Reemplazá por un alias ficticio para el proyecto (no uses uno real) -->
+                    <p class="alias-transferencia">Alias para transferir: <b>mi-emprendimiento.mp</b></p>
+
+                    <label>Adjuntar comprobante / Attach payment receipt:</label>
+                    <input type="file" id="checkout-comprobante" accept="image/*,.pdf">
+                    <p id="nombre-comprobante"></p>
+                </div>
+
+                <button type="submit" id="boton-confirmar">Confirmar pedido / Confirm order</button>
+            </form>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- BLOQUE 3: CONFIRMACIÓN FINAL DEL PEDIDO        -->
+        <!-- ============================================ -->
+        <section id="confirmacion" style="display:none;">
+            <h2>¡Pedido confirmado! / Order confirmed!</h2>
+            <div class="ticket-confirmacion" id="ticket-confirmacion">
+                <p><b>N° de pedido / Order #:</b> <span id="conf-numero"></span></p>
+                <p><b>Fecha / Date:</b> <span id="conf-fecha"></span></p>
+                <p><b>Cliente / Customer:</b> <span id="conf-nombre"></span></p>
+                <p><b>Dirección de envío / Shipping address:</b> <span id="conf-direccion"></span></p>
+                <p><b>Contacto / Contact:</b> <span id="conf-contacto"></span></p>
+                <p><b>Forma de pago / Payment method:</b> <span id="conf-pago"></span></p>
+                <p id="conf-comprobante-linea"><b>Comprobante / Receipt:</b> <span id="conf-comprobante"></span></p>
+
+                <hr>
+                <ul id="conf-items"></ul>
+                <hr>
+                <p class="conf-total"><b>Total:</b> <span id="conf-total"></span></p>
+            </div>
+
+            <div class="acciones-confirmacion">
+                <button id="boton-descargar-comprobante"><i class="fa-solid fa-download"></i> Descargar comprobante / Download receipt</button>
+                <button id="boton-nuevo-pedido">Hacer un nuevo pedido / Place a new order</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================ -->
+    <!-- MODALES DE AVISO                               -->
+    <!-- Reemplazan a los alert() del navegador. Cada uno arranca oculto      -->
+    <!-- (display:none) y el JavaScript ya resuelto se encarga de mostrarlo   -->
+    <!-- y ocultarlo — no hace falta tocar esa parte.                          -->
+    <!-- TAREA: en los tres, revisen/completen el mensaje en español e inglés. -->
+    <!-- ============================================ -->
+
+    <div class="modal-overlay" id="modal-checkout-vacio" style="display:none;">
+        <div class="modal-caja">
+            <p>Agregá al menos un producto antes de finalizar la compra.</p>
+            <br>
+            <p>Add at least one product before checking out.</p>
+            <button class="modal-cerrar">Aceptar / OK</button>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-whatsapp-vacio" style="display:none;">
+        <div class="modal-caja">
+            <p>Todavía no agregaste productos al carrito.</p>
+            <br>
+            <p>You haven't added any products to your cart yet.</p>
+            <button class="modal-cerrar">Aceptar / OK</button>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-vaciar-vacio" style="display:none;">
+        <div class="modal-caja">
+            <p>El carrito ya está vacío, no hay nada para vaciar.</p>
+            <br>
+            <p>The cart is already empty, there's nothing to empty.</p>
+            <button class="modal-cerrar">Aceptar / OK</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Proyecto Interdisciplinario — Taller de Informática e Inglés</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
