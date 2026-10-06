@@ -14,7 +14,7 @@ body {
 
 /* ENCABEZADO */
 header {
-    background-color: #7a3b12;
+    background-color: #2E7D32;
     color: white;
     padding: 1.5rem 2rem;
     text-align: center;
@@ -52,7 +52,7 @@ nav a {
 
 nav a:hover,
 nav a.activo {
-    color: #ffcf70;
+    color:  #66BB6A;
     letter-spacing: 1px;
 }
 
@@ -260,7 +260,7 @@ img {
     display: block;
     width: 100%;
     margin-top: 12px;
-    background-color: #7a3b12;
+    background-color: #2E7D32;
     color: white;
     border: none;
     padding: 10px;
@@ -728,7 +728,7 @@ img {
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: #7a3b12;
+    background-color: #2E7D32;
     color: white;
     margin-top: 3rem;
 }
