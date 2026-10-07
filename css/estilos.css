@@ -57,8 +57,8 @@ nav a.activo {
 }
 
 #contador-nav {
-    background-color: #ffcf70;
-    color: #7a3b12;
+    background-color: #66BB6A;
+    color:#2E7D32;
     font-size: 0.75em;
     font-weight: 700;
     padding: 1px 7px;
@@ -90,8 +90,8 @@ section {
 }
 
 section h2 {
-    color: #7a3b12;
-    border-bottom: 2px solid #7a3b12;
+    color: #2E7D32;
+    border-bottom: 2px solid  #2E7D32;
     padding-bottom: 6px;
     margin-bottom: 16px;
 }
@@ -141,20 +141,20 @@ img {
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     padding: 1.2rem;
-    border-top: 4px solid #7a3b12;
+    border-top: 4px solid #2E7D32;
     text-align: center;
     overflow: auto;
 }
 
 .tarjeta-producto h3 {
-    color: #7a3b12;
+    color: #2E7D32;
     margin-bottom: 6px;
 }
 
 .tarjeta-producto .precio {
     font-size: 1.15em;
     font-weight: bold;
-    color: #b45309;
+    color: #66BB6A;
     margin-bottom: 10px;
 }
 
@@ -178,7 +178,7 @@ img {
 }
 
 .buscador i {
-    color: #7a3b12;
+    color: #2E7D32;
 }
 
 .buscador input {
@@ -211,7 +211,7 @@ img {
 }
 
 .etiqueta-stock {
-    background-color: #c0392b;
+    background-color: #2E7D32;
     color: white;
 }
 
@@ -234,7 +234,7 @@ img {
 }
 
 .btn-cantidad {
-    background-color: #7a3b12;
+    background-color: #2E7D32;
     color: white;
     border: none;
     width: 28px;
@@ -245,7 +245,7 @@ img {
 }
 
 .btn-cantidad:hover {
-    background-color: #5e2d0d;
+    background-color:#1B5E20;
 }
 
 .input-cantidad {
@@ -270,7 +270,7 @@ img {
 }
 
 .boton-agregar:hover {
-    background-color: #5e2d0d;
+    background-color: #1B5E20;
 }
 
 .boton-agregar.agregado {
@@ -292,7 +292,7 @@ img {
 }
 
 .lista-enlaces a {
-    color: #7a3b12;
+    color: #2E7D32;
     text-decoration: none;
     font-weight: 500;
 }
@@ -301,7 +301,7 @@ img {
     width: 20px;
     text-align: center;
     margin-right: 6px;
-    color: #b45309;
+    color: #66BB6A;
 }
 
 .lista-enlaces a:hover {
@@ -361,7 +361,7 @@ img {
 }
 
 #tabla-carrito th {
-    background-color: #7a3b12;
+    background-color: #2E7D32;
     color: white;
     padding: 10px 12px;
     text-align: left;
@@ -387,7 +387,7 @@ img {
 }
 
 .item-quitar-carrito:hover {
-    background-color: #922b21;
+    background-color: #1B5E20;
 }
 
 .cantidad-carrito {
@@ -434,7 +434,7 @@ img {
 
 .modal-cerrar {
     margin-top: 16px;
-    background-color: #7a3b12;
+    background-color: #2E7D32;
     color: white;
     border: none;
     padding: 10px 24px;
@@ -444,7 +444,7 @@ img {
 }
 
 .modal-cerrar:hover {
-    background-color: #5e2d0d;
+    background-color: #1B5E20;
 }
 
 /* BOTONES DE LA CONFIRMACIÓN (descargar comprobante / nuevo pedido) */
@@ -456,7 +456,7 @@ img {
 }
 
 #boton-descargar-comprobante {
-    background-color: #1f6feb;
+    background-color: #2E7D32;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -465,7 +465,7 @@ img {
 }
 
 #boton-descargar-comprobante:hover {
-    background-color: #185abd;
+    background-color: #1B5E20;
 }
 
 .total-carrito {
@@ -474,10 +474,10 @@ img {
     gap: 12px;
     font-size: 1.3em;
     font-weight: bold;
-    color: #7a3b12;
+    color: #2E7D32;
     margin-top: 16px;
     padding-top: 12px;
-    border-top: 2px solid #7a3b12;
+    border-top: 2px solid #2E7D32;
 }
 
 #vaciar-carrito {
@@ -532,11 +532,11 @@ img {
 }
 
 #boton-finalizar {
-    background-color: #7a3b12;
+    background-color: #2E7D32;
 }
 
 #boton-finalizar:hover {
-    background-color: #5e2d0d;
+    background-color: #1B5E20;
 }
 
 /* FORMULARIO DE CHECKOUT */
@@ -553,7 +553,7 @@ img {
 
 #checkout label {
     font-weight: 600;
-    color: #7a3b12;
+    color: #2E7D32;
     margin-top: 8px;
 }
 
@@ -578,8 +578,8 @@ img {
 }
 
 .alias-transferencia {
-    background-color: #fff3cd;
-    border: 1px dashed #b45309;
+    background-color: #E8F5E9;
+    border: 1px dashed #66BB6A;
     padding: 10px;
     border-radius: 6px;
     margin: 10px 0;
@@ -637,7 +637,7 @@ img {
 }
 
 #boton-nuevo-pedido {
-    background-color: #7a3b12;
+    background-color: #2E7D32;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -646,7 +646,7 @@ img {
 }
 
 #boton-nuevo-pedido:hover {
-    background-color: #5e2d0d;
+    background-color:#1B5E20;
 }
 
 /* PIE DE PÁGINA */
@@ -668,7 +668,7 @@ img {
 
 .metodo-pago i {
     font-size: 1.8em;
-    color: #7a3b12;
+    color: #2E7D32;
     margin-bottom: 8px;
     display: block;
 }
@@ -677,7 +677,7 @@ img {
 .acordeon-faq {
     width: 100%;
     text-align: left;
-    background-color: #7a3b12;
+    background-color: #2E7D32;
     color: white;
     border: none;
     padding: 14px 18px;
@@ -688,14 +688,14 @@ img {
 }
 
 .acordeon-faq:hover {
-    background-color: #5e2d0d;
+    background-color: #1B5E20;
 }
 
 .panel-faq {
     display: none;
     background-color: white;
     padding: 16px 18px;
-    border-left: 3px solid #7a3b12;
+    border-left: 3px solid #2E7D32;
     margin-bottom: 4px;
     border-radius: 0 0 6px 6px;
 }
@@ -721,7 +721,7 @@ img {
 .tarjeta-testimonio .autor-testimonio {
     margin-top: 10px;
     font-weight: bold;
-    color: #7a3b12;
+    color: #2E7D32;
     text-align: right;
 }
 
